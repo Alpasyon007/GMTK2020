@@ -6,8 +6,11 @@ public class Player : MonoBehaviour
 {
     [SerializeField] int playerHealth = 100; //Currently an int and 100, may change to a float.
     [SerializeField] HealthBar healthBar;
+    [SerializeField] Texture2D cursor;
+    [SerializeField] Animator animator;
 
     private void Start() {
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
         healthBar.SetMaxHeatlh(playerHealth);
     }
 
@@ -20,8 +23,14 @@ public class Player : MonoBehaviour
         playerHealth = Mathf.Clamp(playerHealth - damage, 0, 100);
         healthBar.SetHealth(playerHealth);
         if (playerHealth == 0) {
-            KillPlayer();
+            StartCoroutine(KillAnimation());
         }
+    }
+
+    IEnumerator KillAnimation() {
+        animator.SetTrigger("Explode");
+        yield return new WaitForSeconds(0.3f);
+        KillPlayer();
     }
 
     void KillPlayer() {

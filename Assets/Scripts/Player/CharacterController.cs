@@ -31,16 +31,16 @@ public class CharacterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1)) {
             Fire();
         }
-        if (Input.GetKey(KeyCode.UpArrow)) {
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) {
             rb.AddForce(up * speed);
         }
-        if (Input.GetKey(KeyCode.RightArrow)) {
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) {
             rb.AddForce(right * speed);
         }
-        if (Input.GetKey(KeyCode.LeftArrow)) {
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) {
             rb.AddForce(left * speed);
         }
-        if (Input.GetKey(KeyCode.DownArrow)) {
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
             rb.AddForce(down * speed);
         }
     }

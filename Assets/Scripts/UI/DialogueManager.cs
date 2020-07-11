@@ -61,7 +61,7 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 	public void EndDialogue() {
-		SceneManager.LoadScene("Game");
+		FindObjectOfType<SceneLoader>().LoadNextScene();
 	}
 
 	//IEnumerator DeleteSentence(string sentence) {

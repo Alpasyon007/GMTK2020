@@ -7,6 +7,7 @@ public class Control : MonoBehaviour {
     [SerializeField] Transform target;
     [SerializeField] float speed = 200f;
     [SerializeField] float nextWaypointDist = 3f;
+    [SerializeField] Animator animator;
 
     Path path;
     int currentWaypoint = 0;
@@ -30,8 +31,14 @@ public class Control : MonoBehaviour {
         controlHealth = Mathf.Clamp(controlHealth - damage, 0, 1000);
         healthBar.SetHealth(controlHealth);
         if (controlHealth == 0) {
-            KillControl();
+            StartCoroutine(KillAnimation());
         }
+    }
+
+    IEnumerator KillAnimation() {
+        animator.SetTrigger("Explode");
+        yield return new WaitForSeconds(0.3f);
+        KillControl();
     }
 
     void KillControl() {
