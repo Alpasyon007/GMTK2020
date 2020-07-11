@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Linq;
 
 public class CharacterController : MonoBehaviour
 {
@@ -10,7 +12,18 @@ public class CharacterController : MonoBehaviour
     [SerializeField] Camera cam;
 
     Vector2 mousePos;
+    Vector2 up;
+    Vector2 right;
+    Vector2 left;
+    Vector2 down;
+    Vector2[] array = {Vector2.up, Vector2.right, Vector2.left, Vector2.down};
 
+    private void Start() {
+        up = Vector2.up;
+        right = Vector2.right;
+        left = Vector2.left;
+        down = Vector2.down;
+    }
 
     void Update() {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -19,16 +32,16 @@ public class CharacterController : MonoBehaviour
             Fire();
         }
         if (Input.GetKey(KeyCode.UpArrow)) {
-            rb.AddForce(Vector2.up * speed);
+            rb.AddForce(up * speed);
         }
         if (Input.GetKey(KeyCode.RightArrow)) {
-            rb.AddForce(Vector2.right * speed);
+            rb.AddForce(right * speed);
         }
         if (Input.GetKey(KeyCode.LeftArrow)) {
-            rb.AddForce(Vector2.left * speed);
+            rb.AddForce(left * speed);
         }
         if (Input.GetKey(KeyCode.DownArrow)) {
-            rb.AddForce(Vector2.down * speed);
+            rb.AddForce(down * speed);
         }
     }
 
@@ -37,6 +50,31 @@ public class CharacterController : MonoBehaviour
     }
 
     void Fire() {
-        Object.Instantiate(bullet, transform.position, transform.rotation);
+        GameObject.Instantiate(bullet, transform.position, transform.rotation);
+    }
+
+    public void OutOfControl() {
+        StartCoroutine(RandomiseControls());
+        Debug.Log("Out of control");
+    }
+
+    public void InControl() {
+        StopCoroutine(RandomiseControls());
+        up = Vector2.up;
+        right = Vector2.right;
+        left = Vector2.left;
+        down = Vector2.down;    
+    }
+
+    IEnumerator RandomiseControls() {
+        while (true) {
+            var rng = new System.Random();
+            var values = Enumerable.Range(0, 4).OrderBy(x => rng.Next()).ToArray();
+            up = array[values[0]];
+            right = array[values[1]];
+            left = array[values[2]];
+            down = array[values[3]];
+            yield return new WaitForSeconds(4f);
+        }
     }
 }
