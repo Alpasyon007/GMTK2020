@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7242616337637994221}
   - component: {fileID: 2172442801259445120}
   - component: {fileID: 6876186592418650722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyType1
   m_TagString: EnemyType1
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ MonoBehaviour:
   player: {fileID: 0}
   control: {fileID: 0}
   bullet: {fileID: 3991014517867907492, guid: 69eddedacc7fe694bb204830e24dfe97, type: 3}
-  speed: 5
+  speed: 0.1
   nextWaypointDist: 3
   fireRate: 2
 --- !u!114 &6876186592418650722

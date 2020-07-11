@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4572759790749263653}
   - component: {fileID: 1080224718501298910}
   - component: {fileID: -6137423346197851213}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyType2
   m_TagString: EnemyType2
   m_Icon: {fileID: 0}
@@ -167,9 +167,6 @@ MonoBehaviour:
   control: {fileID: 0}
   speed: 5
   nextWaypointDist: 3
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
   fireRate: 2
 --- !u!114 &-6137423346197851213
 MonoBehaviour:

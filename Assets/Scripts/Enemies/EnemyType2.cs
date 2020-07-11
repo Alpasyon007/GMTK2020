@@ -48,12 +48,13 @@ public class EnemyType2 : MonoBehaviour {
     }
 
     private void Update() {
-        if(Vector2.Distance(target.position, transform.position) < 4) {
+        if(Vector2.Distance(target.position, transform.position) < 4 && Time.time > canFire) {
+            canFire = Time.time + fireRate;
             Shoot();
         }
 
         if(Vector2.Distance(target.position, transform.position) < 2) {
-            rb.AddForce(transform.position - target.position * 2 * Time.deltaTime);
+            rb.AddForce(transform.position - target.position * 0.5f * Time.deltaTime);
         }
 
         time += Time.deltaTime / 0.2f;
@@ -63,7 +64,7 @@ public class EnemyType2 : MonoBehaviour {
     }
 
     void Shoot() {
-        GameObject.Find("Player").GetComponent<Rigidbody2D>().AddForce(transform.position - target.position * 10 * Time.deltaTime);
+        GameObject.Find("Player").GetComponent<Rigidbody2D>().AddForce(target.position - transform.position * 5 * Time.deltaTime);
     }
 
     private void FixedUpdate() {
@@ -80,7 +81,7 @@ public class EnemyType2 : MonoBehaviour {
         }
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
+        Vector2 force = direction * speed;
 
         rb.AddForce(force);
 
