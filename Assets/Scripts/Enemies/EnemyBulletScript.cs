@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBulletScript : MonoBehaviour {
-    [SerializeField] float bulletSpeed = 50f;
+    [SerializeField] float bulletSpeed = 10f;
 
     private void Start() {
         StartCoroutine(KillSelf());

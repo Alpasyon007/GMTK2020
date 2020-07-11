@@ -13,6 +13,9 @@ public class EnemySpawner : MonoBehaviour
     Vector2 visibility;
     [SerializeField] GameObject[] enemy;
     [SerializeField] private float SpawnRate = 1f;
+    [SerializeField] int SpawnAmount = 15;
+    [SerializeField] int EnemyOneAmount = 10;
+    [SerializeField] int EnemyTwoAmount = 5;
     private float canSpawn = -1f;
 
     private GameObject[] getCount_1;
@@ -21,11 +24,9 @@ public class EnemySpawner : MonoBehaviour
     int count_1;
     int count_2;
 
-    private void Start() {
-        centre = GameObject.Find("Control").transform.position;
-    }
-
     private void Update() {
+        centre = GameObject.Find("Control").transform.position;
+
         angle += RotateSpeed * Time.deltaTime;
 
         var offset = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)) * Radius;
@@ -39,11 +40,11 @@ public class EnemySpawner : MonoBehaviour
         count_2 = getCount_2.Length;
         count = count_1 + count_2;
 
-        if(!(visibility.x >= 0 && 1 >= visibility.x && visibility.y >= 0 && 1 >= visibility.y) && count < 15 && Time.time > canSpawn) {
+        if(!(visibility.x >= 0 && 1 >= visibility.x && visibility.y >= 0 && 1 >= visibility.y) && count < SpawnAmount && Time.time > canSpawn) {
             canSpawn = Time.time + SpawnRate;
-            if (count_1 < 10) {
+            if (count_1 < EnemyOneAmount) {
                 GameObject.Instantiate(enemy[0], transform.position, transform.rotation);
-            } else if (count_2 < 5) {
+            } else if (count_2 < EnemyTwoAmount) {
                 GameObject.Instantiate(enemy[1], transform.position, transform.rotation);
             }
             

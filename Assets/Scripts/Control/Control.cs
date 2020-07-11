@@ -19,13 +19,16 @@ public class Control : MonoBehaviour {
     float time;
 
     [SerializeField] int controlHealth = 1000; //Currently an int and 100, may change to a float.
+    [SerializeField] HealthBar healthBar;
 
     public void HealControl(int heal) {
         controlHealth = Mathf.Clamp(controlHealth + heal, 0, 1000);
+        healthBar.SetHealth(controlHealth);
     }
 
     public void DamageControl(int damage) {
         controlHealth = Mathf.Clamp(controlHealth - damage, 0, 1000);
+        healthBar.SetHealth(controlHealth);
         if (controlHealth == 0) {
             KillControl();
         }
@@ -36,6 +39,7 @@ public class Control : MonoBehaviour {
     }
 
     private void Start() {
+        healthBar.SetMaxHeatlh(controlHealth);
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
 

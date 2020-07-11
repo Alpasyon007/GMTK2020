@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour { 
-    [SerializeField] float bulletSpeed = 50f;
+    [SerializeField] float bulletSpeed = 10f;
 
     private void Start() {
         StartCoroutine(KillSelf());
     }
 
-    void Update()
-    {
+    void Update() {
         transform.Translate(Vector2.up * bulletSpeed * Time.deltaTime);
     }
     
@@ -28,6 +27,9 @@ public class Bullet : MonoBehaviour {
             Destroy(this.gameObject);
         } else if (other.CompareTag("Control")) {
             other.GetComponent<Control>().DamageControl(5);
+            Destroy(this.gameObject);
+        } else if (other.CompareTag("Asteroid")) {
+            other.GetComponent<Asteroid>().KillAsteroid();
             Destroy(this.gameObject);
         }
     }

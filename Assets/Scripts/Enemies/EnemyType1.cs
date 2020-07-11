@@ -9,7 +9,6 @@ public class EnemyType1 : MonoBehaviour {
     [SerializeField] GameObject bullet;
     [SerializeField] float speed = 200f;
     [SerializeField] float nextWaypointDist = 3f;
-    [SerializeField] LayerMask layer;
     [SerializeField] private float fireRate = 2f;
     private float canFire = -1f;
 

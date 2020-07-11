@@ -13,9 +13,7 @@ public class Asteroid : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.CompareTag("Bullet")) {
-            Destroy(gameObject);
-        } else if (other.gameObject.CompareTag("Player")) {
+        if (other.gameObject.CompareTag("Player")) {
             other.gameObject.GetComponent<Player>().DamagePlayer(30);
         } else if (other.gameObject.CompareTag("EnemyType1")) {
             other.gameObject.GetComponent<EnemyType1Stats>().DamageEnemy(30);
@@ -25,5 +23,9 @@ public class Asteroid : MonoBehaviour
             other.gameObject.GetComponent<Control>().DamageControl(20);
             Destroy(gameObject);
         }
+    }
+
+    public void KillAsteroid() {
+        Destroy(gameObject);
     }
 }

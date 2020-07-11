@@ -8,7 +8,6 @@ public class EnemyType2 : MonoBehaviour {
     [SerializeField] Transform control;
     [SerializeField] float speed = 5f;
     [SerializeField] float nextWaypointDist = 3f;
-    [SerializeField] LayerMask layer;
     [SerializeField] private float fireRate = 2f;
     private float canFire = -1f;
 

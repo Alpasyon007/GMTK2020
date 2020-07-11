@@ -1,21 +1,13 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour {
+public class PauseMenu : MonoBehaviour
+{
     public static bool IsPaused = false;
     [SerializeField] GameObject PauseMenuUI;
-    [SerializeField] public string scene_name;
-    Scene current_scene;
-    GameObject player;
-    private void Awake() {
-        current_scene = SceneManager.GetSceneByName(scene_name);
-        player = GameObject.Find("Player");
-    }
-    
-    // Update is called once per frame
+
     void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             if (IsPaused) {
@@ -40,11 +32,10 @@ public class PauseMenu : MonoBehaviour {
 
     public void LoadMenu() {
         SceneManager.LoadScene("Main Menu");
-        SceneManager.UnloadSceneAsync(current_scene);
     }
-
-    public void  QuitGame() {
+    public void QuitGame() {
         Debug.Log("Quit Game");
         Application.Quit();
     }
+
 }
