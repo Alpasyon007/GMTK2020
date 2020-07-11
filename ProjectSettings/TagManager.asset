@@ -4,19 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - GunBarrel
-  - GunBody
-  - GunMuzzle
-  - GunClip
-  - Weapon
-  - GunProjectile
-  - Spawner
-  - GunStock
-  - SmokeTrail
-  - GunSight
-  - GunFlash
-  - Projectile
+  - Control
+  - EnemyType1
+  - EnemyType2
+  - Bullet
   layers:
   - Default
   - TransparentFX

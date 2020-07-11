@@ -147,12 +147,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139555333}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -18, z: 0}
   m_LocalScale: {x: 0.3, y: 0.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 1066182059}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &139555335
 SpriteRenderer:
@@ -598,11 +598,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320292174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.46, y: -6.223421, z: -4.4804688}
+  m_LocalPosition: {x: 0, y: 18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &335591375
 GameObject:
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAAIexL1C3kaAIAAA4FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoUx2CTQW2sI6SEfE9rJxRchrbEGWfJIcoBk+O9dyTZ26Ynl7dvdtx/yFxHKVsCcNhsj+JPmQL6PiLfJt1HvfIQT3Wu1FZ/Qcd4Fd4Un0cB5o05oxKc+zOoSnBHsh9pLT44QrJXItSnXfA+pts4inFNpAV1GOx+tEPoakRP+jJc+5IzW7N5bn2gto9EFTQbKgemp0SRKlsvldDZvIzp+Q68Vk7SsgHvtfVQSTRYt35uBqrCzlhVNEl9KSylsK4y4cxUaT2lla2wLCVxQbDSomU5iBAoQ+8J52cPwlzy34Fpphp5XwuDEmrzkp27GWFJ7aPR9UFn7SvPpNOhqkj795x837tzo8rGrO418DVcIdnijZ0atG8x5CK8G0sOYjlQe6E7CewHqWW+MrhVHpzO1D60tzFb932traQHs0OON1Buwrgbb6tY6iRfJdHG3Hkf37b58O5cwiFMqRbm7rgGBrdRh+OEswOCifqH2cDS2zYqoF/THwm+6H15X63gQxjp0tQ0rr3Sna+OpZB3G5xurXaqNggC3+itQVLrzK6Zxt9u88Q3K3ngeqH9HbfHW1z2Pm5AA9/wounG96uN1b7bQxyewxUvtpFDQi/aOZ5xTqpVqjm04ky5sW5ucskHYvhb83ysjQO843+3ieDaLWDJPxvM4YQsWJ/cxj3dssSThDIXCPql8bYS248GtqT65wpPrPi+jjaFVOHxu6HEjPks9GLlQud4yA6BemgxX4WCwCD5SvuYCB7QF54QK+yZfGZGaHYBn10RZ6HR9coZmfZaMVOJDO49kJA3fk4xcyOUvUEsDBBQAAAgIAAAAIex9qk0dbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrRSaqJZSkpSkrGxkZFBsompia6psUmyRbKxiblxinFSsoWlUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAAIexL1C3kaAIAAA4FAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAAIex9qk0dbQAAAHgAAAAJACQAAAAAAAAAAAAAALUCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAbQMAAAAA
+    dataString: UEsDBBQAAAgIAAAAIewVoSo3XwIAAAUFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVEtz2jAQ/iuMziVjMATSW+sQ0kMeE9rJxRchrbEGWfLoESAZ/ntXssGue/Lq29e3n1b+IkLZGpjTZm0Ef9IcyPcRCTb5Nuqcj3CkO6024hMuMe+CuzIE0RjzRp3QiE9CmtUVOCPYD7WTIThB0CtRaFOt+A4ybZ1FuKDSArqMdiFbIfQ1Ikf8jO9Cygmt6SJYn2jdJaMzmgyUA9OFzm4Wt8t0MZkvV+Nk0WZdcpoUr5ikVQ088O9lJjfLNj6YMVThdG1UcjML7bSUwrbkiDvVcfiM1tbjaBjABcVhI6MpHksQu9K1h2vyS1FYcC0xQ0/3wqBmTVXyUzdCVtTuG3YfVPrQZz6ZRFZN0af//OPGXRhdPV76TpLQw5WC7d/oiVHrekr34fuO+CSKdKByT7cS3ktQz3pttFccnc74kOotTO+743W0rAS27/CG6gD0dad6MriiMMM5Tn/MpKi2V+UR2Egd9Y7bAAbv5hcSjrti2xKIBhZ/LPymu/5StY4HYaxDVzulCvS22psQSlZRszCNd5k2CiLckq5BUelOr1jGDa9w4Ou1HXgeaHg+bfPWd3kVg5QId/FJMnC96sP1smypD09gyxfvpFDQkQ6OZ9Qp00o1G9bX5JK28aagrJe284L/u1oE6C3n222aTqcJm81n43k6Y0uWzhYpT7dseUfi7gmFc1L52hBt5cFbU11xhXt2+auM1obWcdu5oYe1+Kx0T3KhCr1hBkC9NBWuxMFgE3yXfMUFCrQB54SK902+ciI12wPPr4XyOOnq6AzNuyo5qcWHdgHJSRZ/Izk5k/NfUEsDBBQAAAgIAAAAIex9qk0dbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrRSaqJZSkpSkrGxkZFBsompia6psUmyRbKxiblxinFSsoWlUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAAIewVoSo3XwIAAAUFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAAIex9qk0dbQAAAHgAAAAJACQAAAAAAAAAAAAAAKwCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAZAMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -757,7 +757,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 3
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -831,7 +831,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 362db76670ef1714abf4d44d41053011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 7377607114886689206, guid: ecff2721586ae504aa4b90a2af8d8c81, type: 3}
+  enemy:
+  - {fileID: 7377607114886689206, guid: ecff2721586ae504aa4b90a2af8d8c81, type: 3}
+  - {fileID: 5804579517002301855, guid: e9becfff8014d8244a365b4320057c5d, type: 3}
 --- !u!4 &982375531
 Transform:
   m_ObjectHideFlags: 0
@@ -839,12 +841,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982375529}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -16, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1066182059}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1066182057
 GameObject:
@@ -862,7 +864,7 @@ GameObject:
   - component: {fileID: 1066182063}
   m_Layer: 0
   m_Name: Control
-  m_TagString: Untagged
+  m_TagString: Control
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -928,7 +930,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 139555334}
+  - {fileID: 982375531}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -945,11 +947,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 320292175}
-  speed: 10
+  speed: 1000
   nextWaypointDist: 3
-  ground:
-    serializedVersion: 2
-    m_Bits: 0
+  controlHealth: 1000
 --- !u!114 &1066182061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -990,7 +990,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -1183,6 +1183,7 @@ GameObject:
   - component: {fileID: 1210140900}
   - component: {fileID: 1210140902}
   - component: {fileID: 1210140903}
+  - component: {fileID: 1210140904}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1342,8 +1343,8 @@ MonoBehaviour:
   version: 1
   uniqueID: 6008066015250711980
   points:
-  - {x: 5, y: 3, z: 0}
-  - {x: -5, y: -3, z: 0}
+  - {x: 6, y: 5, z: 0}
+  - {x: -6, y: -5, z: 0}
   convex: 1
   minBoundsHeight: 1
   penaltyDelta: 0
@@ -1359,3 +1360,67 @@ MonoBehaviour:
   legacyMode: 0
   serializedVersion: 1
   legacyUseWorldSpace: 0
+--- !u!114 &1210140904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210140897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e38287037003d45bf390a2c50c3685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 100
+--- !u!1 &1983750596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1983750597}
+  - component: {fileID: 1983750598}
+  m_Layer: 0
+  m_Name: Asteroid Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1983750597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983750596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 22, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1983750598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983750596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a76a527cc9479e46a2e268f0490841c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  astreoids:
+  - {fileID: 4717640330708498295, guid: 27dbbc096a081fd4aac4ae7853aac726, type: 3}
+  - {fileID: 3609561561087172382, guid: 442e513b4fd21314192411605760d9eb, type: 3}
+  - {fileID: 4103438223002468819, guid: a17769bc59042454cb3c9ce8ad43f6d7, type: 3}
+  - {fileID: 5967477142913718484, guid: 33dd8f9aa461b764a84fe021ca91a393, type: 3}
+  - {fileID: 1749417171343216725, guid: a4ad38a9cd4c99f49a29dbcfac0fcef4, type: 3}
+  - {fileID: 6642941918466819600, guid: efd0a84408b96d0479fbac57b21e4b64, type: 3}
+  SpawnRate: 0.5
