@@ -1,6 +1,7 @@
-﻿    using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -9,13 +10,24 @@ public class Player : MonoBehaviour
     [SerializeField] Texture2D cursor;
     [SerializeField] Animator animator;
 
+    int maxHealth;
+
+    private void Update() {
+        if(Vector2.Distance(transform.position, GameObject.Find("Control").transform.position) > 10) {
+            StartCoroutine(KillAnimation());
+        }
+    }
+
     private void Start() {
-        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+        maxHealth = playerHealth;
+        //Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
         healthBar.SetMaxHeatlh(playerHealth);
     }
 
     public void HealPlayer(int heal) {
-        playerHealth = Mathf.Clamp(playerHealth + heal, 0, playerHealth);
+        if(playerHealth < maxHealth) {
+            playerHealth += heal;
+        }
         healthBar.SetHealth(playerHealth);
     }
 
@@ -34,6 +46,7 @@ public class Player : MonoBehaviour
     }
 
     void KillPlayer() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Destroy(this.gameObject);
     }
 }

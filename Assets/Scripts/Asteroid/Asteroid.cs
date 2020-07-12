@@ -10,6 +10,9 @@ public class Asteroid : MonoBehaviour
 
     private void Update() {
         transform.Translate(Vector2.down * (Random.Range(0, 10) * 0.2f) * Time.deltaTime);
+        if(transform.position.y < -20) {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other) {

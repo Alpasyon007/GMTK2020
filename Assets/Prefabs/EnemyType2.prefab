@@ -165,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   control: {fileID: 0}
-  speed: 5
+  speed: 10
   nextWaypointDist: 3
   fireRate: 0
 --- !u!114 &-6137423346197851213

@@ -187,7 +187,7 @@ MonoBehaviour:
   control: {fileID: 0}
   bullet: {fileID: 3991014517867907492, guid: 69eddedacc7fe694bb204830e24dfe97, type: 3}
   speed: 8
-  nextWaypointDist: 3
+  nextWaypointDist: 1
   fireRate: 0.5
 --- !u!114 &6876186592418650722
 MonoBehaviour:

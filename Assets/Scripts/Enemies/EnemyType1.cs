@@ -51,9 +51,20 @@ public class EnemyType1 : MonoBehaviour {
         disToControl = Vector2.Distance(control.position, transform.position);
 
         if (disToPlayer > disToControl + 1) {
-            target = control.transform;
+            time += Time.deltaTime / 0.2f;
+            Vector3 dir = control.transform.position - transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f;
+            transform.rotation = Quaternion.Slerp(Quaternion.identity, Quaternion.AngleAxis(angle, Vector3.forward), time);
+        } else if(disToPlayer > disToControl + 3) {
+            target = control;
+            Vector3 dir = target.position - transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f;
+            transform.rotation = Quaternion.Slerp(Quaternion.identity, Quaternion.AngleAxis(angle, Vector3.forward), time);
         } else {
-            target = player.transform;
+            time += Time.deltaTime / 0.2f;
+            Vector3 dir = target.position - transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f;
+            transform.rotation = Quaternion.Slerp(Quaternion.identity, Quaternion.AngleAxis(angle, Vector3.forward), time);
         }
 
         if(Vector2.Distance(target.position, transform.position) < 2 && Time.time > canFire) {
@@ -61,10 +72,7 @@ public class EnemyType1 : MonoBehaviour {
             Shoot();
         }
 
-        time += Time.deltaTime / 0.2f;
-        Vector3 dir = target.position - transform.position;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f;
-        transform.rotation = Quaternion.Slerp(Quaternion.identity, Quaternion.AngleAxis(angle, Vector3.forward), time);
+        
     }
 
     void Shoot() {

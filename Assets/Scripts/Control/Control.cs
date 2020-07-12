@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Control : MonoBehaviour {
     [SerializeField] Transform target;
@@ -42,6 +43,7 @@ public class Control : MonoBehaviour {
     }
 
     void KillControl() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Destroy(this.gameObject);
     }
 

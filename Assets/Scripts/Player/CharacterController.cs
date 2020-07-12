@@ -11,6 +11,9 @@ public class CharacterController : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] Camera cam;
     [SerializeField] AudioSource audio;
+    [SerializeField] int healAmout = 3;
+    [SerializeField] private float healRate = 0.1f;
+    private float canHeal = -1f;
 
     Vector2 mousePos;
     Vector2 up;
@@ -32,6 +35,9 @@ public class CharacterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse1)) {
             Fire();
             StartCoroutine(PlayShootSound());
+        } else if (Input.GetKey(KeyCode.Mouse0) && Time.time > canHeal) {
+            canHeal = Time.time + healRate;
+            Heal(healAmout);
         }
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) {
             rb.AddForce(up * speed);
@@ -45,6 +51,10 @@ public class CharacterController : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
             rb.AddForce(down * speed);
         }
+    }
+
+    void Heal(int healAmount) {
+        GameObject.Find("Control").GetComponent<Control>().HealControl(healAmount);
     }
 
     IEnumerator PlayShootSound() {

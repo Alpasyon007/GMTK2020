@@ -197,6 +197,8 @@ MonoBehaviour:
   bullet: {fileID: 7247075441181685963, guid: f2430a441f09e794a8cd435cc06d9c27, type: 3}
   cam: {fileID: 0}
   audio: {fileID: 5395313591631437837}
+  healAmout: 3
+  healRate: 0.5
 --- !u!114 &5395313591631437824
 MonoBehaviour:
   m_ObjectHideFlags: 0
