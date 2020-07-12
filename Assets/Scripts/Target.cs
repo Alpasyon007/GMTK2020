@@ -11,13 +11,11 @@ public class Target : MonoBehaviour
         NextLocation();
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.CompareTag("Control")) {
-            NextLocation();
-        }
-    }
+    
 
-    void NextLocation() {
+    public void NextLocation() {
+        Debug.Log("Next Waypoint");
+        Debug.Log(waypoint);
         transform.position = waypoints[waypoint].position;
         waypoint++;
     }

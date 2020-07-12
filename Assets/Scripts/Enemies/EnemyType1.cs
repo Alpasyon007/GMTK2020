@@ -85,7 +85,7 @@ public class EnemyType1 : MonoBehaviour {
         }
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed;
+        Vector2 force = direction.normalized * speed * Time.deltaTime;
 
         rb.AddForce(force);
 

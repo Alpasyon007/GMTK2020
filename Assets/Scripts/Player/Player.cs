@@ -15,12 +15,12 @@ public class Player : MonoBehaviour
     }
 
     public void HealPlayer(int heal) {
-        playerHealth = Mathf.Clamp(playerHealth + heal, 0, 100);
+        playerHealth = Mathf.Clamp(playerHealth + heal, 0, playerHealth);
         healthBar.SetHealth(playerHealth);
     }
 
     public void DamagePlayer(int damage) {
-        playerHealth = Mathf.Clamp(playerHealth - damage, 0, 100);
+        playerHealth = Mathf.Clamp(playerHealth - damage, 0, playerHealth);
         healthBar.SetHealth(playerHealth);
         if (playerHealth == 0) {
             StartCoroutine(KillAnimation());

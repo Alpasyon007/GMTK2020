@@ -10,6 +10,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] float speed = 5f;
     [SerializeField] GameObject bullet;
     [SerializeField] Camera cam;
+    [SerializeField] AudioSource audio;
 
     Vector2 mousePos;
     Vector2 up;
@@ -30,6 +31,7 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse1)) {
             Fire();
+            StartCoroutine(PlayShootSound());
         }
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) {
             rb.AddForce(up * speed);
@@ -43,6 +45,12 @@ public class CharacterController : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) {
             rb.AddForce(down * speed);
         }
+    }
+
+    IEnumerator PlayShootSound() {
+        audio.Play();
+        yield return new WaitForSeconds(0.1f);
+        audio.Stop();
     }
 
     private void FixedUpdate() {

@@ -35,9 +35,7 @@ public class EnemyType2 : MonoBehaviour {
     }
 
     void UpdatePath() {
-        if(Vector2.Distance(target.position, transform.position) > 6) {
             seeker.StartPath(rb.position, target.position, PathComplete);
-        }
     }
 
     void PathComplete(Path p) {
@@ -48,13 +46,13 @@ public class EnemyType2 : MonoBehaviour {
     }
 
     private void Update() {
-        if(Vector2.Distance(target.position, transform.position) < 4 && Time.time > canFire) {
+        if(Vector2.Distance(target.position, transform.position) < 3 && Time.time > canFire) {
             canFire = Time.time + fireRate;
             Shoot();
         }
 
-        if(Vector2.Distance(target.position, transform.position) < 2) {
-            rb.AddForce(transform.position - target.position * 0.5f * Time.deltaTime);
+        if(Vector2.Distance(target.position, transform.position) < 3) {
+            rb.AddForce((transform.position - target.position).normalized * 5 * Time.deltaTime);
         }
 
         time += Time.deltaTime / 0.2f;
@@ -64,7 +62,7 @@ public class EnemyType2 : MonoBehaviour {
     }
 
     void Shoot() {
-        GameObject.Find("Player").GetComponent<Rigidbody2D>().AddForce(target.position - transform.position * 5 * Time.deltaTime);
+        GameObject.Find("Player").GetComponent<Rigidbody2D>().AddForce((transform.position - target.position).normalized * 5 * 100 * Time.deltaTime);
     }
 
     private void FixedUpdate() {
@@ -81,7 +79,7 @@ public class EnemyType2 : MonoBehaviour {
         }
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed;
+        Vector2 force = direction.normalized * speed * Time.deltaTime;
 
         rb.AddForce(force);
 

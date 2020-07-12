@@ -87,7 +87,7 @@ public class Control : MonoBehaviour {
         }
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
+        Vector2 force = direction.normalized * speed * Time.deltaTime;
 
         rb.AddForce(force);
 
@@ -95,6 +95,12 @@ public class Control : MonoBehaviour {
 
         if (distance < nextWaypointDist) {
             currentWaypoint++;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.CompareTag("Target")) {
+            other.gameObject.GetComponent<Target>().NextLocation();
         }
     }
 }
