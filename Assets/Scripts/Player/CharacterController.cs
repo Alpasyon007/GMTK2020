@@ -62,25 +62,18 @@ public class CharacterController : MonoBehaviour
     }
 
     public void OutOfControl() {
-        StartCoroutine(RandomiseControls());
-        Debug.Log("Out of control");
+        var rng = new System.Random();
+        var values = Enumerable.Range(0, 4).OrderBy(x => rng.Next()).ToArray();
+        up = array[values[0]];
+        right = array[values[1]];
+        left = array[values[2]];
+        down = array[values[3]];
     }
 
     public void InControl() {
-        StopCoroutine(RandomiseControls());
         up = Vector2.up;
         right = Vector2.right;
         left = Vector2.left;
         down = Vector2.down;    
-    }
-
-    IEnumerator RandomiseControls() {
-            var rng = new System.Random();
-            var values = Enumerable.Range(0, 4).OrderBy(x => rng.Next()).ToArray();
-            up = array[values[0]];
-            right = array[values[1]];
-            left = array[values[2]];
-            down = array[values[3]];
-            yield return null;
     }
 }

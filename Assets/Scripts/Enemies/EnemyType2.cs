@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class EnemyType2 : MonoBehaviour {
     [SerializeField] Transform player;
@@ -46,13 +47,13 @@ public class EnemyType2 : MonoBehaviour {
     }
 
     private void Update() {
-        if(Vector2.Distance(target.position, transform.position) < 3 && Time.time > canFire) {
+        if(Vector2.Distance(target.position, transform.position) < 2.3f && Time.time > canFire) {
             canFire = Time.time + fireRate;
             Shoot();
         }
 
-        if(Vector2.Distance(target.position, transform.position) < 3) {
-            rb.AddForce((transform.position - target.position).normalized * 5 * Time.deltaTime);
+        if(Vector2.Distance(target.position, transform.position) < 1) {
+            rb.AddForce((transform.position - target.position).normalized * 2 * 100 * Time.deltaTime);
         }
 
         time += Time.deltaTime / 0.2f;
@@ -62,7 +63,7 @@ public class EnemyType2 : MonoBehaviour {
     }
 
     void Shoot() {
-        GameObject.Find("Player").GetComponent<Rigidbody2D>().AddForce((transform.position - target.position).normalized * 5 * 100 * Time.deltaTime);
+        GameObject.Find("Player").GetComponent<Rigidbody2D>().AddForce((transform.position - target.position).normalized * 2 * 100 * Time.deltaTime);
     }
 
     private void FixedUpdate() {

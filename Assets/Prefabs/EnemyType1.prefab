@@ -186,9 +186,9 @@ MonoBehaviour:
   player: {fileID: 0}
   control: {fileID: 0}
   bullet: {fileID: 3991014517867907492, guid: 69eddedacc7fe694bb204830e24dfe97, type: 3}
-  speed: 5
+  speed: 8
   nextWaypointDist: 3
-  fireRate: 2
+  fireRate: 0.5
 --- !u!114 &6876186592418650722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,5 +201,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5a6e4b3a52cf447aee1aa8b313f7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 30
+  enemyHealth: 20
   animator: {fileID: 3083058930075366091}

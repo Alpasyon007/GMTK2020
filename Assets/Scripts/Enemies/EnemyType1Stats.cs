@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyType1Stats : MonoBehaviour
 {
-    [SerializeField] int enemyHealth = 30;
+    [SerializeField] int enemyHealth = 20;
     [SerializeField] Animator animator;
 
     public void HealEnemy(int heal) {

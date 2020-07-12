@@ -11,11 +11,7 @@ public class Target : MonoBehaviour
         NextLocation();
     }
 
-    
-
     public void NextLocation() {
-        Debug.Log("Next Waypoint");
-        Debug.Log(waypoint);
         transform.position = waypoints[waypoint].position;
         waypoint++;
     }
