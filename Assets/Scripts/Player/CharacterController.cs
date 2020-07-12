@@ -32,12 +32,9 @@ public class CharacterController : MonoBehaviour
     void Update() {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-        if (Input.GetKeyDown(KeyCode.Mouse1)) {
+        if (Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.Mouse0)) {
             Fire();
             StartCoroutine(PlayShootSound());
-        } else if (Input.GetKey(KeyCode.Mouse0) && Time.time > canHeal) {
-            canHeal = Time.time + healRate;
-            Heal(healAmout);
         }
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) {
             rb.AddForce(up * speed);

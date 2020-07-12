@@ -47,7 +47,7 @@ public class EnemyType2 : MonoBehaviour {
     }
 
     private void Update() {
-        if(Vector2.Distance(target.position, transform.position) < 3f && Time.time > canFire) {
+        if(Vector2.Distance(target.position, transform.position) < 2.5f && Time.time > canFire) {
             canFire = Time.time + fireRate;
             Shoot();
         }

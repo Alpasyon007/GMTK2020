@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     int maxHealth;
 
     private void Update() {
-        if(Vector2.Distance(transform.position, GameObject.Find("Control").transform.position) > 10) {
+        if(Vector2.Distance(transform.position, GameObject.Find("Control").transform.position) > 15) {
             StartCoroutine(KillAnimation());
         }
     }
